@@ -376,5 +376,264 @@ elif (a==0) and (b==0):
 
 
 
+#EJERCICIO ext 3_10
+print("tamaño de un tornillo")
+t = float (input("favor de ingresar el tamaño del tornillo en CM:"))
 
+if (t>=1) and (t<3):
+    print("la mediad para este tornillo es pequeño")
+elif(t>=3) and (t<5):
+    print("la mediad para este tornillo es mediano")
+    
+elif(t>=5) and (t<6.5):
+    print("la mediad para este tornillo es grande")
+elif(t>=6.5) and (t<8.5):
+    print("la mediad para este tornillo es muy grande")
+else:
+    print("fuera de rango admisible")
+    
+    
+![image](https://user-images.githubusercontent.com/79875910/111720940-85cdf680-8824-11eb-999b-5d16c705e325.png)
+
+
+
+
+#EJERCICIO ext 3_11
+print('calculo de dos puntos')
+print("ingrese el primer punto cartesiano")
+a,b = int(input('Introduce el punto ax : ') ),int(input('Introduce el punto ay: ') )
+
+print("ingrese el segundo punto cartesiano")
+c,d = int(input('Introduce el punto bx: ') ),int(input('Introduce el punto by: ') )
+#formulas
+medio=a+c/2
+medio1=b+d/2
+print("el nuevo punto en el plano cartesianoes",medio,",",medio1)
+
+if(medio>0) and (medio1>0):
+    print("esta en el cuadrante I")
+elif (medio<0) and (medio>0):
+    print("esta en el cuadrante II")
+elif(medio<0) and (medio1<0):
+    print("esta en el cudrante III")
+elif(medio>0) and (medio1<0):
+    print("esta en el cuadrante IIII")
+    
+
+![image](https://user-images.githubusercontent.com/79875910/111721022-b6ae2b80-8824-11eb-8a54-91e59793b331.png)
+
+
+
+
+
+#EJERCICIO ext 3_12
+a,b,c = [int(x) for x in input('Dame tres valores enteros: ').split(' ')]
+r = (a if a < c else c) if a < b else (b if b < c else c)
+print('Resultado:', r)
+
+![image](https://user-images.githubusercontent.com/79875910/111721096-d3e2fa00-8824-11eb-9f36-9ddec645ed73.png)
+
+
+
+
+
+
+#EJERCICIO ext 3_13
+from math import sqrt
+A = int(input("Ingrese el coeficiente de la variable cuadrática\n"))
+B = int(input("Ingrese el coeficiente de la variable lineal\n"))
+C = int(input("Ingrese el término independiente\n"))
+x1= 0
+x2= 0
+if ((B**2)-4*A*C) < 0:
+  print("La solución de la ecuación es con números complejos")
+else:
+  x1 = (-B+sqrt(B**2-(4*A*C)))/(2*A)
+  x2 = (-B-sqrt(B**2-(4*A*C)))/(2*A)
+  print("Las soluciones de la ecuación son:")
+  print(x1)
+  print(x2)
+  
+  
+  ![image](https://user-images.githubusercontent.com/79875910/111721154-f07f3200-8824-11eb-82c9-66fe83723958.png)
+  
+  
+  
+#EJERCICIO ext 3_14
+from math import sqrt
+class Ecuaciones2Grado():
+    def calcular(self, A, B, C):
+        if ((B**2)-4*A*C) < 0:
+            print("La solución de la ecuación es con números complejos")
+        else:
+            x1 = (-B+sqrt(B**2-(4*A*C)))/(2*A)
+            x2 = (-B-sqrt(B**2-(4*A*C)))/(2*A)
+            print("""\
+Las soluciones de la ecuación son:
+x1 = {}
+x2 = {} """.format(x1, x2))
+ec1 = Ecuaciones2Grado()
+ec1.calcular(1,-5,6)
+ec2 = Ecuaciones2Grado()
+ec2.calcular(2,-7,3)
+
+![image](https://user-images.githubusercontent.com/79875910/111721225-10165a80-8825-11eb-84cf-6a1662b2137d.png)
+
+
+
+#EJERCICIO ext 3_15
+i = 10
+ while i > 0:
+   print(i)
+    i = i - 
+    
+  ![image](https://user-images.githubusercontent.com/79875910/111721283-2b816580-8825-11eb-9cf8-8bb96e08532a.png)
+  
+ 
+#EJERCICIO ext 4_1
+ print('Cálculo de la media de una serie de datos')
+print('-----------------------------------------')
+suma = 0
+num = 0
+x = float( input('Introduce un valor (0 para acabar) : ') )
+while x != 0:
+ suma = suma + x
+ num = num + 1
+ x = float( input('Introduce un valor (0 para acabar) : ') )
+print('La media de los elementos es', suma/num)
+
+
+![image](https://user-images.githubusercontent.com/79875910/111721349-494eca80-8825-11eb-9848-938babc6420c.png)
+
+  
+
+#EJERCICIO ext 4_2
+i=0
+while i<3:
+      usuario=input("ingrese su nombre de usuario")
+      i=i +1
+      if str(usuario)=="Joel":
+            print("USUARIO CORRECTO")
+            clave=input("ingrese su clave")
+            if str(clave)=="SENATI":
+                  print("Bienvenido Andy")
+                  break
+            else:
+                  print("CLAVE INCORRECTA")
+                  if    i==3:
+                        print("INTENTOS AGOTADOS")
+                        break
+      else:
+            print("USUARIO INCORRECTO")
+            if    i==3:
+                  print("INTENTOS AGOTADOS")
+
+
+
+#EJERCICIO ext 4_4
+def factorial(x,n):
+ if(n>0):
+  x=factorial(x,n-1)
+  x=x*n
+ else:
+  x=1
+ return x
+n=int(input("ingresa un numero  \n"))
+x=1
+x=factorial(x,n)
+print (x)
+
+
+![image](https://user-images.githubusercontent.com/79875910/111722622-d4c95b00-8827-11eb-8a6a-3205e7ac02be.png)
+
+
+
+
+#EJERCICIO ext 4_5
+print('comparador de numeros')
+a=float(input('Escriba un numero:'))
+b=float(input('Escriba otro número:'))
+if a<b:
+    print('Menor: ', a, 'Mayor: ', b)
+elif a>b:
+    print('Menor: ', b, 'Mayor: ', a)
+else:
+    print('Los numeros son iguales')
+    
+![image](https://user-images.githubusercontent.com/79875910/111722684-f1659300-8827-11eb-8546-4f35c16c8082.png)
+
+
+
+#EJERCICIO ext 4_6
+import random
+intentosRealizados = 0
+print('¡Hola! ¿Cómo te llamas?')
+miNombre = input()
+ número = random.randint(1, 20)
+ print('Bueno, ' + miNombre + ', estoy pensando en un número entre 1 y 20.')
+ while intentosRealizados < 6:
+ print('Intenta adivinar.') # Hay cuatro espacios delante de print.
+ estimación = input()
+estimación = int(estimación)
+intentosRealizados = intentosRealizados + 1
+if estimación < número:
+print('Tu estimación es muy baja.') # Hay ocho espacios delante de print.
+if estimación > número:
+ print('Tu estimación es muy alta.')
+if estimación == número:
+ break
+if estimación == número:
+intentosRealizados = str(intentosRealizados)
+stimación != número:
+número = str(número)
+print('Pues no. El número que estaba pensando era ' + número)
+
+![image](https://user-images.githubusercontent.com/79875910/111722748-122de880-8828-11eb-8482-5fa35d412a6a.png)
+
+
+
+#EJERCICIO ext 4_7
+import math
+ 
+def es_primo(numero):
+    """
+    Funcion que determina si un numero es primo
+    Tiene que recibir el numero entero
+    """
+ 
+    if (numero<=1):
+        return False
+ 
+    for i in range(2, math.ceil(math.sqrt(numero))+1):
+        if(numero%i==0 and i!=numero):
+            return False
+    return True
+ 
+while True:
+    try:
+        numero = int(input("inserta un numero (0) de botellas>> "))
+        if numero==0:
+            break
+        if es_primo(numero):
+            print ("\nEl numero %s es aceptable para formar un triangulo" % numero)
+        else:
+            print ("\nEl numero %s NO es acetable para aplilarlos" % numero)
+    except:
+        print ("\nEl numero tiene que ser entero")
+        
+        
+![image](https://user-images.githubusercontent.com/79875910/111722833-3b4e7900-8828-11eb-8a5a-6c6744bfe551.png)
+
+
+#EJERCICIO ext 4_9
+a=int(input("ingrsa el primer valor"))
+b=int(input("ingrsa el segundo valor"))   
+c= b+1
+
+for i in range(c,a):
+   i=sum(range(c,a))
+   print("la suma")
+   print(i)         
+   
+ ![image](https://user-images.githubusercontent.com/79875910/111722927-61741900-8828-11eb-95e4-f4d6ff88dbe6.png)
 
